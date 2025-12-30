@@ -1,0 +1,1 @@
+-- calculate the number of days between a user's signup_date and their very first direct_deposit
