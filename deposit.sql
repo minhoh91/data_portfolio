@@ -1,0 +1,2 @@
+-- Measure the health of the signup funnel.
+-- Business Logic: Of all users who signed up in the last 90 days, what percentage have made at least one deposit?
