@@ -8,7 +8,7 @@ FROM transactions
 WHERE transaction_type = 'purchase'
 ),
 
-WITH transactions_3 AS(
+transactions_3 AS(
 SELECT
   user_id
   , transaction_period
