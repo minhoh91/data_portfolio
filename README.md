@@ -1,3 +1,23 @@
+users
+  user_id (PK): Unique identifier for each customer.
+  signup_date: The date the user joined the platform.
+  status: Current account standing (e.g., Active, Inactive, Pending).
+  sales_region: Geographic location (e.g., North, South, East, West).
+
+transactions
+  transaction_id (PK): Unique identifier for each transaction.
+  user_id (FK): Links the transaction to a specific user.
+  merchant_id (FK): Links the transaction to a specific merchant.
+  transaction_date: The date the purchase or deposit occurred.
+  amount: The dollar value of the transaction.
+  transaction_type: The category of movement (e.g., Purchase, Deposit, Withdrawal).
+
+merchants
+  merchant_id (PK): Unique identifier for each vendor.
+  merchant_name: The name of the business (e.g., Amazon, Starbucks).
+  category: Business industry (e.g., Groceries, Dining, Travel, Luxury).
+  risk_level: A scale of 1–5 indicating the likelihood of fraudulent activity.
+
 Project A: Customer Onboarding & Health
 1: The "Power User" Audit: Identifies elite customers by filtering for a specific frequency of high-value actions (direct deposits and purchases) within a rolling 30-day window.
 
