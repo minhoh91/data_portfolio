@@ -25,21 +25,21 @@ Project A: Customer Onboarding & Health
 
 3: New User "Activation" Rate: Calculates the conversion percentage of recent signups who successfully funded their accounts, measuring the effectiveness of the initial user funnel.
 
-Project B: Revenue & Regional Performance
+Project B: Revenue & Regional Performance  
 1: Regional Spend & Transaction Density: Breaks down interchange revenue by geographic location, ranking regions by total purchase volume and transaction frequency.
 
 2: Daily Transaction Frequency Audit: A risk-mitigation query that identifies "High-Velocity" behavior by flagging users who exceed 5 purchases in a single calendar day.
 
 3: Monthly Revenue Growth & Trend Analysis: Aggregates purchase volume by month to provide Finance with a chronological view of month-over-month (MoM) growth and seasonality.
 
-Project C: Advanced Retention & Lifetime Value
+Project C: Advanced Retention & Lifetime Value  
 1: The "First Deposit" Lead Time: Measures the "time-to-value" by calculating the exact number of days it takes for a new user to move from signup to their first direct deposit.
 
 2: Month-over-Month User Retention: Identifies "Sticky" users by using LAG() and PERIOD_DIFF to find customers who transacted in consecutive months, regardless of the year-change.
 
 3: Running Total of Revenue per User: Uses Window Functions to calculate a chronological cumulative spend for every user, allowing the business to identify "Whale" customers as their value grows over time
 
-Technical Skills & SQL Proficiencies
+Technical Skills & SQL Proficiencies  
 Advanced Date Manipulation: Used EXTRACT(YEAR_MONTH), DATEDIFF, and PERIOD_DIFF to handle complex time-series data and year-over-year transitions.
 
 Window Functions: Implemented LAG() for month-over-month retention analysis and SUM() OVER for calculating lifetime running totals (LTV).
