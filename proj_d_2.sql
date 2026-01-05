@@ -5,14 +5,14 @@ SELECT
   m.merchant_id
   , m.merchant_name
   , m.risk_level
-  , COUNT(transaction_id) AS transaction_count
+  , COUNT(t.transaction_id) AS transaction_count
   , AVG(t.amount) AS transaction_average
-  , CASE WHEN AVG(transaction_amount) > 500 THEN 'HIGH RISK' ELSE 'MONITOR' END AS audit
+  , CASE WHEN AVG(t.amount) > 500 THEN 'HIGH RISK' ELSE 'MONITOR' END AS audit
 FROM transactions t
 JOIN merchants m ON t.merchant_id = m.merchant_id
-WHERE risk_level >= 4
-  AND transaction_type = 'Purchase'
-  AND tranction_date >= CURDATE() - INTERVAL 60 DAY
-GROUP BY merchant_id, merchant_name, risk_level
-HAVING COUNT(transction_id) > 50
+WHERE m.risk_level >= 4
+  AND t.transaction_type = 'Purchase'
+  AND t.transaction_date >= CURDATE() - INTERVAL 60 DAY
+GROUP BY m.merchant_id, m.merchant_name, m.risk_level
+HAVING COUNT(t.transaction_id) > 50
 ;
