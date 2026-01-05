@@ -19,7 +19,7 @@ FROM user_category_count
 SELECT
   u.user_id
   , u.unique_category_count
-  , CASE WHEN u.unique_category_count > avg_categories THEN 'High'
+  , CASE WHEN u.unique_category_count > p.avg_categories THEN 'High'
   WHEN u.unique_category_count = p.avg_categories THEN 'Average'
   ELSE 'Low' END AS engagement_persona
 FROM user_category_count u 
